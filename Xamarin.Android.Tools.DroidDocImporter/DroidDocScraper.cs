@@ -52,6 +52,7 @@ namespace Xamarin.Android.Tools.DroidDocImporter
 				}));
 			}
 
+			await DownloadLink(PackageListFileOrUrl, new FileInfo (Path.Combine(OutputPath.FullName, "reference", "packages.html")));
 			var packages = await GetPackageListAsync();
 
 			//Parallel.ForEach (packages, async (package) => {
